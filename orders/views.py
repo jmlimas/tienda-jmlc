@@ -6,6 +6,7 @@ import datetime
 from .models import Order, Payment, OrderProduct
 
 # Create your views here.
+#estos  son los pagos  
 def payments(request):
     return render(request, 'orders/payments.html')
 
@@ -72,10 +73,3 @@ def place_order(request, total=0, quantity=0):
             return render(request,'orders/payments.html',context)
     else:
         return redirect('checkout')
-
-
-
-
-
-
-
